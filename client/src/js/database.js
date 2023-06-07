@@ -26,11 +26,9 @@ export const putDb = async (content) => {
 
   const result = await request;
   console.log('data updated & saved to the database', result);
-  return result;
 };
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
-  console.error('getDb not implemented');
 
   const jateDB = await openDB('jate', 1);
 
@@ -42,7 +40,7 @@ export const getDb = async () => {
 
   const result = await request;
   console.log('result', result);
-  return result;
+  return result.content;
 
 };
 
